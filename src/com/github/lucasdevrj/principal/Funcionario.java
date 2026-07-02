@@ -11,6 +11,14 @@ public class Funcionario {
         this.salario = salario;
     }
 
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
     public void exibirInformacoes() {
         System.out.printf("\nFuncionário %s - Cargo: %s - Salário %.2f", nome, cargo, salario);
     }
