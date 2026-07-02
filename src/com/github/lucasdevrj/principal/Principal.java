@@ -5,11 +5,13 @@ public class Principal {
         Funcionario funcionario = new Funcionario("João", 8500);
         funcionario.setCargo("Desenvolvedor de Software");
 
+        System.out.println("Cargo do Funcionário: " + funcionario.getCargo());
+        System.out.println("Nome do Funcionário: " + funcionario.getNome());
+        System.out.println("Salário do Funcionário: R$" + funcionario.getSalario());
+
         funcionario.exibirInformacoes();
         funcionario.reajustarSalario(5);
         funcionario.exibirInformacoes();
 
-        System.out.println();
-        System.out.println("Cargo: " + funcionario.getCargo());
     }
 }
