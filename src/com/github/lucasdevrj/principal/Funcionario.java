@@ -2,9 +2,14 @@ package com.github.lucasdevrj.principal;
 
 public class Funcionario {
 
-    String nome;
-    String cargo;
-    double salario;
+    private String nome;
+    private String cargo;
+    private double salario;
+
+    public Funcionario(String nome, double salario) {
+        this.nome = nome;
+        this.salario = salario;
+    }
 
     public void exibirInformacoes() {
         System.out.printf("\nFuncionário %s - Cargo: %s - Salário %.2f", nome, cargo, salario);
