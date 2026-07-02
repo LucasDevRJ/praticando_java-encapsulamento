@@ -5,6 +5,7 @@ public class Funcionario {
     private String nome;
     private String cargo;
     private double salario;
+    private int controleDeReajuste = 0;
 
     public Funcionario(String nome, double salario) {
         this.nome = nome;
@@ -32,7 +33,12 @@ public class Funcionario {
     }
 
     public void reajustarSalario(double percentual) {
-        salario += salario * (percentual / 100);
-        System.out.printf("\nNovo salário de %s é %.2f", nome, salario);
+        if (controleDeReajuste >= 1) {
+            System.out.println("\nNão pode mais fazer reajustes.");
+        } else {
+            controleDeReajuste++;
+            salario += salario * (percentual / 100);
+            System.out.printf("\nNovo salário de %s é %.2f", nome, salario);
+        }
     }
 }

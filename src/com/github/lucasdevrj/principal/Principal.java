@@ -11,6 +11,7 @@ public class Principal {
 
         funcionario.exibirInformacoes();
         funcionario.reajustarSalario(5);
+        funcionario.reajustarSalario(10);
         funcionario.exibirInformacoes();
 
     }
